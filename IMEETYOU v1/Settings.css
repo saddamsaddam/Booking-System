@@ -1,0 +1,152 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    background-color: #f3f6f9;
+    margin: 20px auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 30px;
+    margin-left: 4%;
+}
+
+.box h1 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .box2,
+  .box3 {
+    width: 20%;
+    height: 20px;
+    background-color: #f3f6f9;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:11%;
+  }
+  
+  .box2 p,
+  .box3 p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin: 0;
+  }
+
+.container2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box4,
+  .box5 {
+    width: 40%;
+    height: 500px;
+    background-color: #f3f6f9;
+    margin: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 30px;
+    box-sizing: border-box;
+    font-weight: bold;   
+    text-align: center;
+  }
+  
+  .box4 p,
+  .box5 p {
+    font-size: 15px;
+    color: black;
+    margin-top: 15%;
+  }
+
+  .box5 p2 {
+    font-size: 15px;
+    color: black;
+    margin-top: 10%;
+  }
+
+  .box6 {
+    width: 50%;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15%;
+  }
+  .box6 p {
+    font-size: 13px;
+    margin-bottom: 15%;
+  }
+
+  .box7 {
+    width: 50%;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .box7 p {
+    font-size: 13px;
+    margin-bottom: 15%;
+  }
+
+  .box8 {
+    width: 50%;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .box8 p {
+    font-size: 13px;
+    margin-bottom: 15%;
+  }

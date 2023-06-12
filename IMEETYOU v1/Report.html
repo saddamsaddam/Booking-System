@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>IMEETYOU Report</title>
+    <link rel="icon" href="images/icon.png">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+    body {
+      font-family: "Poppins";
+      background-color: #123088;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Added this line to remove scroll bar */
+    }
+
+    .message-container {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+      position: relative; /* Added this line for positioning the close button */
+    }
+
+    .success-message {
+      color: #123088;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #123088;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #3053bc;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #123088;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .close-button:hover {
+      background-color: #ffffff;
+      color: #3053bc;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <button class="close-button" onclick="closeMessage()">×</button>
+    <h2 class="success-message">Your Problem Has Been Reported</h2>
+    <p>Thank you for letting us know. We will investigate and address the issue as soon as possible.</p>
+    <a href="index.html" class="back-button">Back to IMEETYOU</a>
+  </div>
+
+  <script>
+    function closeMessage() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

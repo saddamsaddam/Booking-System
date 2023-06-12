@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMEETYOU Message</title>
+    <link rel="icon" href="images/icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+        body {
+            font-family: "Poppins";
+            background-color: #123088;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .message-container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: justify;
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .success-message {
+            color: #123088;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .emoji {
+            margin-left: 5px;
+            animation: bounce 1s infinite;
+            display: inline-block;
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .back-button-container {
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #123088;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #3053bc;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: #123088;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #ffffff;
+            color: #3053bc;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <button class="close-button" onclick="closeMessage()">×</button>
+        <h2 class="success-message">We Have Received Your Message<span class="emoji">😄</span></h2>
+        <p>We recognize the significance of your query and want to assure you that we are dedicated to providing you with the support you require. Our committed staff is working hard to resolve your problems and give a satisfying answer.</p>
+        <p>We appreciate your understanding and patience. Please know that your query is important to us, and we will try our best to answer you as soon as possible. Our mission is to go above and beyond to guarantee that your experience with our services surpasses your expectations.</p>
+        <div class="back-button-container">
+            <a href="index.html" class="back-button">Back to IMEETYOU</a>
+        </div>
+    </div>
+
+    <script>
+        function closeMessage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

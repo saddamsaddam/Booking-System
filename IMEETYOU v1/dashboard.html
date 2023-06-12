@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>IMeetYou Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>.container-fluid {
+        padding-top: 4rem;
+        padding-left: 4rem;
+      }
+      
+      .row {
+        gap: 1rem;
+      }
+      
+      .bg-light {
+        background-color: #f8f9fa;
+      }
+      
+      .rounded {
+        border-radius: 0.25rem;
+      }
+      
+      .p-4 {
+        padding: 1rem;
+      }
+      
+      .d-flex {
+        display: flex;
+      }
+      
+      .flex-column {
+        flex-direction: column;
+      }
+      
+      .align-items-center {
+        align-items: center;
+      }
+      
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      
+      .mb-0 {
+        margin-bottom: 0;
+      }
+      
+      .h-100 {
+        height: 100%;
+      }
+      
+      .justify-content-between {
+        justify-content: space-between;
+      }
+      
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+      
+      form {
+        margin-bottom: 1rem;
+        
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      
+      input[type="hours"] {
+        width: 18%;
+        margin-right: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+      }
+      
+      .checklist {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+      }
+      
+      .checklist li {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+      }
+      
+      input[type="checkbox"] {
+        width: 35%;
+        margin-right: 0.25rem;
+        transform: scale(1.5);
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      label {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-left: 0.5rem;
+      }
+      
+      .column {
+        flex: 1;
+      }
+      
+      .align-self-end {
+        align-self: flex-end;
+      }
+      
+      .align-self-start {
+        align-self: flex-start;
+      }
+      
+      .btn {
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+      }
+      
+      .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      
+      .btn-primary:hover {
+        color: #fff;
+        background-color: #0069d9;
+        border-color: #0062cc;
+      }
+    
+      .box1 {
+        height: 70%;
+      }
+      
+      </style>
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>IMeetYou</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/pic_user.png" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jackson</h6>
+                        <span><small>User</small></span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="booking.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Booking</a>
+                    <a href="calendar.html" class="nav-item nav-link"><i class="fa fa-calendar"></i>Calendar</a>
+                    <a href="agenda.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Agenda</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+        <!-- Content Start -->
+        <div class="content">
+           <!-- Navbar Start -->
+           <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+            </a>
+            <a href="#" class="sidebar-toggler flex-shrink-0">
+                <i class="fa fa-bars"></i>
+            </a>
+            <form class="d-none d-md-flex ms-4">
+                <input class="form-control border-0" type="search" placeholder="Search">
+            </form>
+            <div class="navbar-nav align-items-center ms-auto">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-bell me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Notification</span>
+                    </a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <img class="rounded-circle me-lg-2" src="img/pic_user.png" alt="" style="width: 40px; height: 40px;">
+                        <span class="d-none d-lg-inline-flex">Jackson</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">My Profile</a>
+                        <a href="setting.html" class="dropdown-item">Settings</a>
+                        <a href="index.html" class="dropdown-item">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+            <!-- Dashboard Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                  <div class="h-100 bg-light rounded p-4 d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <h1 class="mb-0">Set Your Availability</h1>
+                    </div>
+                    <div>
+                      <p>Let Booking know when you're typically available to accept meetings</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <h2 class="mb-0">Available Hours</h2>
+                    </div>
+                    <div class="box1">
+                        <form>
+                          <label for="hours">Hours</label>
+                          <select id="hours" name="hours" required>
+                            <option value="47">12:00 am</option>
+    <option value="48">12:30 am</option>
+    <option value="1">1:00 am</option>
+    <option value="2">1:30 am</option>
+    <option value="3">2:00 am</option>
+    <option value="4">2:30 am</option>
+    <option value="5">3:00 am</option>
+    <option value="6">3:30 am</option>
+    <option value="7">4:00 am</option>
+    <option value="8">4:30 am</option>
+    <option value="9">5:00 am</option>
+    <option value="10">5:30 am</option>
+    <option value="11">6:00 am</option>
+    <option value="12">6:30 am</option>
+    <option value="13">7:00 am</option>
+    <option value="14">7:30 am</option>
+    <option value="15">8:00 am</option>
+    <option value="16">8:30 am</option>
+    <option value="17">9:00 am</option>
+    <option value="18">9:30 am</option>
+    <option value="19">10:00 am</option>
+    <option value="20">10:30 am</option>
+    <option value="21">11:00 am</option>
+    <option value="22">11:30 am</option>
+    <option value="23">12:00 pm</option>
+    <option value="24">12:30 pm</option>
+    <option value="25">1:00 pm</option>
+    <option value="26">1:30 pm</option>
+    <option value="27">2:00 pm</option>
+    <option value="28">2:30 pm</option>
+    <option value="29">3:00 pm</option>
+    <option value="30">3:30 pm</option>
+    <option value="31">4:00 pm</option>
+    <option value="32">4:30 pm</option>
+    <option value="33">5:00 pm</option>
+    <option value="34">5:30 pm</option>
+    <option value="35">6:00 pm</option>
+    <option value="36">6:30 pm</option>
+    <option value="37">7:00 pm</option>
+    <option value="38">7:30 pm</option>
+    <option value="39">8:00 pm</option>
+    <option value="40">8:30 pm</option>
+    <option value="41">9:00 pm</option>
+    <option value="42">9:30 pm</option>
+    <option value="43">10:00 pm</option>
+    <option value="44">10:30 pm</option>
+    <option value="45">11:00 pm</option>
+    <option value="46">11:30 pm</option>
+                          </select>
+                          <select id="hours" name="hours" required>
+                            <option value="47">12:00 am</option>
+                            <option value="48">12:30 am</option>
+                            <option value="1">1:00 am</option>
+                            <option value="2">1:30 am</option>
+                            <option value="3">2:00 am</option>
+                            <option value="4">2:30 am</option>
+                            <option value="5">3:00 am</option>
+                            <option value="6">3:30 am</option>
+                            <option value="7">4:00 am</option>
+                            <option value="8">4:30 am</option>
+                            <option value="9">5:00 am</option>
+                            <option value="10">5:30 am</option>
+                            <option value="11">6:00 am</option>
+                            <option value="12">6:30 am</option>
+                            <option value="13">7:00 am</option>
+                            <option value="14">7:30 am</option>
+                            <option value="15">8:00 am</option>
+                            <option value="16">8:30 am</option>
+                            <option value="17">9:00 am</option>
+                            <option value="18">9:30 am</option>
+                            <option value="19">10:00 am</option>
+                            <option value="20">10:30 am</option>
+                            <option value="21">11:00 am</option>
+                            <option value="22">11:30 am</option>
+                            <option value="23">12:00 pm</option>
+                            <option value="24">12:30 pm</option>
+                            <option value="25">1:00 pm</option>
+                            <option value="26">1:30 pm</option>
+                            <option value="27">2:00 pm</option>
+                            <option value="28">2:30 pm</option>
+                            <option value="29">3:00 pm</option>
+                            <option value="30">3:30 pm</option>
+                            <option value="31">4:00 pm</option>
+                            <option value="32">4:30 pm</option>
+                            <option value="33">5:00 pm</option>
+                            <option value="34">5:30 pm</option>
+                            <option value="35">6:00 pm</option>
+                            <option value="36">6:30 pm</option>
+                            <option value="37">7:00 pm</option>
+                            <option value="38">7:30 pm</option>
+                            <option value="39">8:00 pm</option>
+                            <option value="40">8:30 pm</option>
+                            <option value="41">9:00 pm</option>
+                            <option value="42">9:30 pm</option>
+                            <option value="43">10:00 pm</option>
+                            <option value="44">10:30 pm</option>
+                            <option value="45">11:00 pm</option>
+                            <option value="46">11:30 pm</option>
+                          </select>
+                        </form>
+                        
+                      
+                    <div class="d-flex align-items-end"> <!-- Added align-items-end class here -->
+                        <div class="column">
+                            <h3>Availabe Days</h3>
+                            <ul class="checklist">
+                              <li>
+                                <input type="checkbox" id="monday" disabled>
+                                <label for="monday">Monday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="tuesday" disabled>
+                                <label for="tuesday">Tuesday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="wednesday" disabled>
+                                <label for="wednesday">Wednesday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="thursday" disabled>
+                                <label for="thursday">Thursday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="friday" disabled>
+                                <label for="friday">Friday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="saturday" disabled>
+                                <label for="saturday">Saturday</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="sunday" disabled>
+                                <label for="sunday">Sunday</label>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="column align-self-end">
+                            <button id="editBtn" class="btn btn-primary align-self-start">Edit</button>
+                            <button id="saveBtn" class="btn btn-primary" disabled>Save</button>
+                          </div>
+                  </div>
+                </div>
+              </div>          
+            <!-- Dashboard End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Check if there's a saved state in the browser's localStorage
+        if (localStorage.getItem('checkboxState')) {
+          const checkboxState = JSON.parse(localStorage.getItem('checkboxState'));
+    
+          // Set the saved state for each checkbox
+          for (const day in checkboxState) {
+            document.getElementById(day).checked = checkboxState[day];
+          }
+        }
+    
+        const editBtn = document.getElementById('editBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+    
+        editBtn.addEventListener('click', function() {
+          // Enable checkboxes when Edit button is clicked
+          checkboxes.forEach(function(checkbox) {
+            checkbox.removeAttribute('disabled');
+          });
+    
+          // Enable the Save button and disable the Edit button
+          saveBtn.removeAttribute('disabled');
+          editBtn.setAttribute('disabled', 'true');
+        });
+    
+        saveBtn.addEventListener('click', function() {
+          const checkboxState = {};
+    
+          // Save the state of each checkbox
+          checkboxes.forEach(function(checkbox) {
+            checkboxState[checkbox.id] = checkbox.checked;
+          });
+    
+          // Save the state in the browser's localStorage
+          localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+    
+          // Disable checkboxes when Save button is clicked
+          checkboxes.forEach(function(checkbox) {
+            checkbox.setAttribute('disabled', 'true');
+          });
+    
+          // Disable the Save button and enable the Edit button
+          saveBtn.setAttribute('disabled', 'true');
+          editBtn.removeAttribute('disabled');
+        });
+    </script>
+    <script></script>
+</body>
+
+</html>
